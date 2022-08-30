@@ -1,0 +1,16 @@
+h1 {
+    font-family: 'IBM Plex Serif', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainContainer {
+    border: 1px solid cyan;
+    display: flex;
+    width: 1200px;
+    font-family: 'IBM Plex Serif', serif;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
