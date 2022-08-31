@@ -1,24 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 
-const Stock = (
-    ticker,
-    name,
-    current,
-    hod,
-    low,
-    
-) =>{
-    <div className = "stockBox">
-        <h3>Ticker{ticker}</h3>
-        <h3>{name}</h3>
-        <ul>
-            <li>Current Price: {current}</li>
-            <li>H.O.D: {hod}</li>
-            <li>L.O.D: {hod}</li>
-        </ul>
-    </div>
+function Stock({ticker,name,current,hod,low, removeInput}){
+    //   const [stockBox, setStockBox] = useState({});
+      
+
+      return( 
+      <div className = "stockBox" key = {name}>
+      <h3>Ticker: {name}</h3>
+      {/* <h3>{name}</h3> */}
+      <ul>
+          <li>Current Price: {current}</li>
+          <li>H.O.D: {hod}</li>
+          <li>L.O.D: {low}</li>
+      </ul>
+      <button className ="deleteCard" type = "submit" onClick = {() => removeInput(name)} >-</button>
+      </div>
+  )
 }
+
 
 export default Stock;

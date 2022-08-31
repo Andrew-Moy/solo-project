@@ -14,3 +14,30 @@ h1 {
     align-items: center;
     margin: auto;
 }
+
+.stockBox {
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+    float: left;
+
+}
+
+.deleteCard {
+    // padding-right: 0px;
+    margin-left: 0px;
+    display: flex;
+}
+ul {
+    list-style: none;
+}
+
+.innerbox {
+    border: 1px solid red;
+    width: 1208px;
+    // display:flex;
+    height: 1200px;
+    align-items: center;
+    // justify-content: center;
+    margin:auto;
+}
