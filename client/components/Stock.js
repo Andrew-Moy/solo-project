@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 
 
-function Stock({ticker,name,current,hod,low, removeInput}){
+function Stock({ticker,name,current,high,low, removeInput}){
     //   const [stockBox, setStockBox] = useState({});
       
 
@@ -12,7 +12,7 @@ function Stock({ticker,name,current,hod,low, removeInput}){
       {/* <h3>{name}</h3> */}
       <ul>
           <li>Current Price: {current}</li>
-          <li>H.O.D: {hod}</li>
+          <li>H.O.D: {high}</li>
           <li>L.O.D: {low}</li>
       </ul>
       <button className ="deleteCard" type = "submit" onClick = {() => removeInput(name)} >-</button>

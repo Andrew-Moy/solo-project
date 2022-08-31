@@ -30,16 +30,30 @@ const MainContainer = (props) =>{
         fetch(`http://localhost:8080/stock/${symbol}`)
         .then((response) => response.json())
         .then((data) =>{console.log('DATA: ', data)
-        
-        })
-        .catch(err =>{console.log(err)})
-
-        let updatedValue = {[input]: input};
+        let current = data['1. open'];
+        let high = data['2. high'];
+        let low = data['3. low'];
+        const obj = {
+            'current': current,
+            'high': high,
+            'low': low
+        }
+        let updatedValue = {[input]: obj};
+        console.log(stockBox);
         setStockBox(stockBox =>({
             ...stockBox,
             ...updatedValue
         }))
         setInput('');
+        })
+        .catch(err =>{console.log(err)})
+
+        // let updatedValue = {[input]: input};
+        // setStockBox(stockBox =>({
+        //     ...stockBox,
+        //     ...updatedValue
+        // }))
+        // setInput('');
 
     }
     return( 
